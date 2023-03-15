@@ -47,5 +47,5 @@ app.post('/', async (req, res) => {
   }
 })
 
-const port = process.env.PORT || 3080;
+const port = process.env.PORT || 8080;
 app.listen(port, () => console.log("listening on port 3080"))
