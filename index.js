@@ -28,7 +28,7 @@ const openai = new OpenAIApi(configuration)
 app.get('*', async(req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 })
-app.post('/', async (req, res) => {
+app.post('/api', async (req, res) => {
   const { message } = req.body
   try {
     const response = await openai.createCompletion({
@@ -48,4 +48,4 @@ app.post('/', async (req, res) => {
 })
 
 const port = process.env.PORT || 8080;
-app.listen(port, () => console.log("listening on port 3080"))
+app.listen(port, () => console.log("listening on port 8080"))
